@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
-}
+/* Estilos para a estrutura básica da aplicação */  
+.App {  
+  text-align: center;  
+  font-family: 'Arial', sans-serif; 
+}  
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.App-logo {  
+  height: 40vmin;  
+  pointer-events: none;  
+}  
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* Animação para o logo */  
+@media (prefers-reduced-motion: no-preference) {  
+  .App-logo {  
+    animation: App-logo-spin infinite 20s linear;  
+  }  
+}  
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/* Cabeçalho da aplicação */  
+.App-header {  
+  background: linear-gradient(10deg, rgb(178, 0, 255) 0%, rgba(21, 0, 255, 1) 100%);  
+  min-height: 100vh;  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+  justify-content: center;  
+  font-size: 2em; /* Tamanho da fonte aumentado */  
+  color: white;  
+  padding: 20px 10px; /* Adiciona mais espaçamento */  
+  border-radius: 15px; /* Bordas arredondadas */  
+}  
 
-.App-link {
-  color: #61dafb;
-}
+/* Estilos para links na App */  
+.App-link {  
+  color: white;  
+  text-decoration: none; /* Remove sublinhado padrão */  
+  transition: color 0.3s; /* Transição suave de cor */  
+}  
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-link:hover {  
+  color: rgb(178, 0, 255); /* Cor ao passar o mouse */  
+}  
+
+/* Animação de rotação do logo */  
+@keyframes App-logo-spin {  
+  from {  
+    transform: rotate(0deg);  
+  }  
+  to {  
+    transform: rotate(360deg);  
+  }  
+}  
+
+/* Estilização do Footer */  
+footer {  
+  margin-top: auto;  
+  background: rgb(178, 0, 255);  
+  color: white;  
+  padding: 10px 0; /* Espaço em cima e embaixo */  
+  font-size: 1em; /* Tamanho de fonte padrão */  
+  text-align: center;  
+}  
+
+.product-card {  
+  border: 2px solid rgb(178, 0, 255);  
+  border-radius: 10px;  
+  padding: 15px;  
+  margin: 10px;  
+  transition: transform 0.2s; /* Transição ao passar o mouse */  
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);  
+  background-color: white; /* Fundo branco para o card */  
+}  
+
+.product-card:hover {  
+  transform: scale(1.05); /* Aumenta o card ao passar o mouse */  
+}  
+
+.product-card img {  
+  width: 100%;  
+  border-radius: 8px; /* Bordas arredondadas para a imagem */  
+}  
+
+.product-card h3 {  
+  font-size: 1.5em; /* Ajuste do tamanho do título */  
+  color: rgb(178, 0, 255);  
+}  
+
+.product-card p {  
+  font-size: 1.2em; /* Ajuste do tamanho do texto de preço */  
+}  
+
+.product-list {  
+  display: flex;  
+  flex-wrap: wrap; /* Permite que os cards se ajustem em várias linhas */  
+  justify-content: center; /* Centraliza os cards na página */  
+  padding: 20px; /* Espaçamento interno na lista */  
+}  
+
+.products-page {  
+  background-color: #f1f1f1; /* Cor de fundo suave */  
+  padding: 20px; /* Espaçamento interno para a página de produtos */  
+} 
+
+.custom-button {
+
 }
