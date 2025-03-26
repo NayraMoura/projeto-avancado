@@ -5,6 +5,7 @@ import { products } from '../data/products'; // Importando a lista de produtos
 
 const ProductDetails = () => {  
     const { id } = useParams(); // Pegando o id do produto da URL  
+    console.log("ID do Produto:", id); // Para ver qual ID está sendo pego
     const product = products.find((prod) => prod.id === parseInt(id)); // Encontrando o produto correspondente
     
     if (!product) {

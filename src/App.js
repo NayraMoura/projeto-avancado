@@ -1,37 +1,40 @@
 import React from 'react';  
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';  
 import ProductsPage from './pages/ProductsPage';  
-import ProductDetails from './pages/ProductDetails';  // importando detalhes do produto
+import ProductDetails from './pages/ProductDetails';  // Importando detalhes do produto  
 import Button from './components/Button';  
-import './App.css'; 
+import './App.css';   
 
 const ButtonComponent = () => {  
     const navigate = useNavigate();  
 
-    const handleViewProducts = () => {  
-        navigate('/'); // Navega para a página de produtos  
+    const handleGoBack = () => {  
+        navigate('/'); // Retorna para a página de produtos  
     };  
 
-    return <Button label="Ver Produtos" onClick={handleViewProducts} />;  
+    return <Button label="Voltar" onClick={handleGoBack} />;  
 };  
 
 const App = () => {  
     return (  
         <Router>  
             <div>  
-                {/* Seção dos Botões */}  
-                <div className="button-container">  
-                    <ButtonComponent />  
-                </div>  
-
                 {/* Rotas da Aplicação */}  
                 <Routes>  
                     <Route path="/" element={<ProductsPage />} />  
-                    <Route path="/product/:productId" element={<ProductDetails />} />  
+                    {/* Rota para retornar a página de produtos */}  
+                    <Route path="/product/:id"   
+                           element={  
+                               <div>  
+                                   <ButtonComponent /> {/* Botão de voltar adicionado apenas na página de detalhes */}  
+                                   <ProductDetails />  
+                               </div>  
+                           }   
+                    />  
                 </Routes>  
             </div>  
         </Router>  
     );  
 };  
 
-export default App;   
+export default App;

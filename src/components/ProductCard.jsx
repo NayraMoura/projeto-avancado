@@ -10,9 +10,9 @@ const ProductCard = ({ product, onAddToCart }) => {
         <div className="product-card">  
             <img src={product.image} alt={product.name} style={{ width: '100%' }}/>  
             <h3>{product.name}</h3> 
-            <p>Preço: R$ {product.price}</p>
-            <Link to={`/product/${product.id}`} className="details-button">Detalhes do Produto</Link> {/* Link para detalhar o produto */} 
-            <button onClick={() => onAddToCart(product.id)}>Adicionar ao Carrinho</button>  
+            <p className="price"> R$ {product.price}</p>  
+            <Link to={`/product/${product.id}`} className="product-link">Ver detalhes</Link> {/* Link para detalhar o produto */} 
+            <button onClick={() => onAddToCart(product.id)}className="custom-button">Adicionar ao Carrinho</button>  
         </div>  
     );  
 };  

@@ -1,82 +1,33 @@
-/* Estilos para a estrutura básica da aplicação */  
-.App {  
-  text-align: center;  
-  font-family: 'Arial', sans-serif; 
-}  
+/* Estilização dos cards */ 
+@media (max-width: 768px) { 
 
-.App-logo {  
-  height: 40vmin;  
-  pointer-events: none;  
-}  
+  .product-list {  
+    display: flex;  
+    flex-wrap: wrap; /* Permite que os cards se ajustem em várias linhas */  
+    justify-content: space-around; /* Move itens para a próxima linha */  
+    margin: 20px; /* Margem externa */  
+    flex-direction: column; /* Muda para coluna em telas menores */  
+    align-items: center; /* Centraliza os cards */
+  } 
 
-/* Animação para o logo */  
-@media (prefers-reduced-motion: no-preference) {  
-  .App-logo {  
-    animation: App-logo-spin infinite 20s linear;  
+  .product-card { 
+    flex: 1 1 300px; /* Faz com que os produtos ocupem espaço adequadamente */   
+    border: 2px solid rgb(178, 0, 255);  
+    border-radius: 10px;  
+    padding: 15px;  
+    margin: 10px; 
+    max-width: 300px; /* Largura máxima do cardinal */ 
+    transition: transform 0.2s; /* Transição ao passar o mouse */  
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);  
+    background-color: white; /* Fundo branco para o card */  
   }  
-}  
-
-/* Cabeçalho da aplicação */  
-.App-header {  
-  background: linear-gradient(10deg, rgb(178, 0, 255) 0%, rgba(21, 0, 255, 1) 100%);  
-  min-height: 100vh;  
-  display: flex;  
-  flex-direction: column;  
-  align-items: center;  
-  justify-content: center;  
-  font-size: 2em; /* Tamanho da fonte aumentado */  
-  color: white;  
-  padding: 20px 10px; /* Adiciona mais espaçamento */  
-  border-radius: 15px; /* Bordas arredondadas */  
-}  
-
-/* Estilos para links na App */  
-.App-link {  
-  color: white;  
-  text-decoration: none; /* Remove sublinhado padrão */  
-  transition: color 0.3s; /* Transição suave de cor */  
-}  
-
-.App-link:hover {  
-  color: rgb(178, 0, 255); /* Cor ao passar o mouse */  
-}  
-
-/* Animação de rotação do logo */  
-@keyframes App-logo-spin {  
-  from {  
-    transform: rotate(0deg);  
-  }  
-  to {  
-    transform: rotate(360deg);  
-  }  
-}  
-
-/* Estilização do Footer */  
-footer {  
-  margin-top: auto;  
-  background: rgb(178, 0, 255);  
-  color: white;  
-  padding: 10px 0; /* Espaço em cima e embaixo */  
-  font-size: 1em; /* Tamanho de fonte padrão */  
-  text-align: center;  
-}  
-
-.product-card {  
-  border: 2px solid rgb(178, 0, 255);  
-  border-radius: 10px;  
-  padding: 15px;  
-  margin: 10px;  
-  transition: transform 0.2s; /* Transição ao passar o mouse */  
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);  
-  background-color: white; /* Fundo branco para o card */  
-}  
-
+}
 .product-card:hover {  
   transform: scale(1.05); /* Aumenta o card ao passar o mouse */  
 }  
 
 .product-card img {  
-  width: 100%;  
+  width: 100%;
   border-radius: 8px; /* Bordas arredondadas para a imagem */  
 }  
 
@@ -85,22 +36,66 @@ footer {
   color: rgb(178, 0, 255);  
 }  
 
-.product-card p {  
+
+  .product-card p {  
   font-size: 1.2em; /* Ajuste do tamanho do texto de preço */  
+  width: 90%; /* faz os cards ocuparem mais espaço em telas pequenas */
 }  
 
-.product-list {  
-  display: flex;  
-  flex-wrap: wrap; /* Permite que os cards se ajustem em várias linhas */  
-  justify-content: center; /* Centraliza os cards na página */  
-  padding: 20px; /* Espaçamento interno na lista */  
-}  
-
+/* Estilização da página de produtos */  
 .products-page {  
-  background-color: #f1f1f1; /* Cor de fundo suave */  
+  background: linear-gradient(10deg, rgb(178, 0, 255) 0%, rgba(21, 0, 255, 1) 100%); /* Cor de fundo suave */  
   padding: 20px; /* Espaçamento interno para a página de produtos */  
 } 
 
-.custom-button {
-
+.product-detail {
+  background: linear-gradient(10deg, rgb(178, 0, 255) 0%, rgba(21, 0, 255, 1) 100%);
+  padding: 20px;
+  
 }
+
+/* Estilização dos botões */  
+.custom-button {
+  padding: 10px 20px; /* Espaçamento interno */  
+  border: none; /* Sem borda */  
+  border-radius: 5px; /* Bordas arredondadas */  
+  background-color: rgb(178, 0, 255); /* Cor de fundo */  
+  color: white; /* Cor do texto */  
+  font-size: 1.2em;
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */  
+  transition: background-color 0.3s; /* Transição suave */
+}
+
+.custom-button:hover {  
+  background-color: rgba(21, 0, 255, 1); /* Cor ao passar o mouse */  
+}  
+
+/* Estilização dos links */ 
+.product-link {
+  text-decoration: none;  /* Remove o sublinhado */  
+  font-size: 1.2em;  /* Tamanho da fonte */  
+  color: rgb(178, 0, 255);  /* Cor do texto */  
+  transition: color 0.3s;  /* Transição suave de cores */  
+  
+} 
+
+.product-link:hover {  
+  color: rgba(21, 0, 255, 1);  /* Cor ao passar o mouse */  
+  font-weight: bold;  /* Deixa em negrito ao passar o mouse */  
+}  
+
+.product-link:focus {  
+  outline: 2px solid #ff00c8;  /* Adiciona um contorno ao foco */  
+  outline-offset: 2px;  /* Espaçamento do contorno */  
+} 
+/* Estilização dos preços */ 
+.price {  
+  font-size: 1.5em;  /* Tamanho maior para destaque */  
+  color: rgba(21, 0, 255, 1);  /* Cor para destacar */  
+  font-weight: bold;  /* Deixar em negrito */  
+  text-shadow: 1px 1px 2px rgba(188, 39, 247, 0.917);  /* Sombra suave para destaque */  
+}  
+
+.price::before {   
+  font-weight: normal;  /* Normaliza o peso do texto do prefixo */  
+}  
